@@ -25,6 +25,7 @@ Value: {couch_httpd_proxy, handle_proxy_req, <<"http://127.0.0.1:5985">>}
     }
   }
 }
+2、因为Rhino的bug，在index方法中调用new Date(‘2017-03-10’)时会返回0，而不是预期的Date对象。
 
 四、使用 couchdb-lucene 检索
 curl -v "http://127.0.0.1:5986/_fti/local/jsmm/_design/members/by_property" -d 'q="煤炭"'
